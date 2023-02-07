@@ -1,0 +1,22 @@
+import Head from 'next/head';
+import Link from 'next/link';
+import NavBar from './components/navbar';
+import Footer from './components/footer';
+
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>Drake Buentello</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
+      </Head>
+      <NavBar />
+      <main className='MainContainer IndexContainer'>
+        <h1>Hi, I'm <span>Drake Buentello</span></h1>
+        <h2>Computer Science Undergraduate</h2>
+        <h3>Read more <Link href='about'><span>about me</span></Link> or <Link href='contact'><span>contact me</span></Link></h3>
+      </main>
+      <Footer />
+    </>
+  )
+}
