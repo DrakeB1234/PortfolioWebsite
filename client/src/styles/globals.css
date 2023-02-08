@@ -110,10 +110,8 @@ div#__next {
 		.FooterContainer > .NestedContainer > .FlexRow {
 			gap: 2em;
 		}
-		.FooterContainer > .NestedContainer > .FlexRow > svg {
+		.FooterContainer > .NestedContainer > .FlexRow > a > svg {
 			padding: 0.5em;
-			border: 1px solid var(--color-grey);
-			border-radius: 10px;
 		}
 	/* page specific containers */
 	.IndexContainer{
@@ -130,6 +128,31 @@ div#__next {
 		.IndexContainer span {
 			color: var(--color-secondary);
 		}
+	.AboutContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		height: 60vh;
+		width: 100%;
+		padding: 1em;
+	}
+		.AboutContainer img {
+			height: 8em;
+			width: 8em;
+			border-radius: 50%;
+		}
+		.AboutContainer .AboutDescContainer {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 1em;
+			padding: 1em;
+		}
+			.AboutContainer .AboutDescContainer > div {
+				min-width: 12em;
+				flex: 1;
+				flex-grow: 1;
+			}
 
 /* flex container */
 .FlexRow {

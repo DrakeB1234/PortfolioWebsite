@@ -7,11 +7,22 @@ export default function About() {
     <>
       <Head>
         <title>Drake Buentello | About</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
       </Head>
       <NavBar />
       <main className='MainContainer AboutContainer'>
-        <h1>About Me</h1>
+      <h1>About Me</h1>
+        <div className='AboutDescContainer'>
+          <div className='ImageContainer FlexCol'>
+              <img src='/ME.jpg' alt='pic of me'></img>
+                <h2>Drake Buentello</h2>
+                <h2>Computer Science Student</h2>
+            </div>
+            <div>
+              <h2>I'm a enthusiast of new techonolgies and a strong adapter of them.</h2>
+              <h2>I am currently a student enrolled at Wilmington Univeristy, working towards a BA of Computer Science.</h2>
+              <h2>I believe to be successful in programming is to look deeper beyond abstraction, to understand what really makes it work.</h2>
+            </div>
+        </div>
       </main>
       <Footer />
     </>
