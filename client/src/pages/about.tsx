@@ -10,19 +10,62 @@ export default function About() {
       </Head>
       <NavBar />
       <main className='MainContainer AboutContainer'>
-      <h1>About Me</h1>
-        <div className='AboutDescContainer'>
-          <div className='ImageContainer FlexCol'>
-              <img src='/ME.jpg' alt='pic of me'></img>
+        <h1>About Me</h1>
+          <div className='AboutDescContainer'>
+            <div className='ImageContainer FlexCol'>
+                <img src='/ME.jpg' alt='pic of me'></img>
                 <h2>Drake Buentello</h2>
-                <h2>Computer Science Student</h2>
+                <h3>Computer Science Student</h3>
             </div>
-            <div>
-              <h2>I'm a enthusiast of new techonolgies and a strong adapter of them.</h2>
-              <h2>I am currently a student enrolled at Wilmington Univeristy, working towards a BA of Computer Science.</h2>
-              <h2>I believe to be successful in programming is to look deeper beyond abstraction, to understand what really makes it work.</h2>
+            <div className='FlexCol'>
+              <h2>&emsp;I'm a enthusiast of new techonolgies and a strong adapter of them.</h2>
+              <h2>&emsp;I am currently a student enrolled at Wilmington Univeristy, working towards a BA of Computer Science.</h2>
+              <h2>&emsp;I believe to be successful in programming is to look deeper beyond abstraction, to understand what really makes it work.</h2>
             </div>
-        </div>
+          </div>
+          <div className='SkillsContainer'>
+            <h1>Skills</h1>
+            <div className='FlexRow'>
+              <div className='FlexCol'>
+                <h1>Frontend</h1>
+                <div className="FlexRow">
+                  <img className='SkillIcon' src='/html.png' />
+                  <h2>HTML/CSS</h2>
+                </div>
+                <div className="FlexRow">
+                  <img className='SkillIcon' src='/javascript.png' />
+                  <h2>Javascript</h2>
+                </div>
+                <div className="FlexRow">
+                  <img className='SkillIcon' src='/react.png' />
+                  <h2>React</h2>
+                </div>
+                <div className="FlexRow">
+                  <img className='SkillIcon' src='/next13.png' />
+                  <h2>NEXT.js</h2>
+                </div>
+                <div className="FlexRow">
+                  <img className='SkillIcon' src='/bootstrap.png' />
+                  <h2>Bootstrap</h2>
+                </div>
+              </div>
+              <div className='FlexCol'>
+                <h1>Backend</h1>
+                <div className="FlexRow">
+                  <img className='SkillIcon' src='/python.png' />
+                  <h2>Flask</h2>
+                </div>
+                <div className="FlexRow">
+                  <img className='SkillIcon' src='/nodejs.png' />
+                  <h2>Express.js</h2>
+                </div>
+                <div className="FlexRow">
+                  <img className='SkillIcon' src='/mysql.png' />
+                  <h2>MySQL</h2>
+                </div>
+              </div>
+            </div>
+          </div>
       </main>
       <Footer />
     </>
