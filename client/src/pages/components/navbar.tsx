@@ -17,8 +17,8 @@ export default function NavBar() {
         <>
             <div className='NavContainer DesktopNav'>
                     <Link href='/'>Home</Link>
-                    <Link href='blog'>Blogs</Link>
                     <Link href='about'>About</Link>
+                    <Link href='blog'>Blogs</Link>
                     <Link href='projects'>Projects</Link>
                     <Link href='contact'>Contact</Link>
             </div>
@@ -27,8 +27,8 @@ export default function NavBar() {
                 <div onClick={toggleNav} className={navClass}>
                     <img src='icon-x.svg' />
                     <Link href='/'>Home</Link>
+                    <Link href='about'>About Me</Link>
                     <Link href='blog'>Blogs</Link>
-                    <Link href='about'>About</Link>
                     <Link href='projects'>Projects</Link>
                     <Link href='contact'>Contact</Link>
                 </div>

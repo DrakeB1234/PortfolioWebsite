@@ -12,6 +12,8 @@ export default function Contact() {
       <NavBar />
       <main className='MainContainer ContactContainer'>
         <h1>Contact Me</h1>
+        <h3>Interested in getting in touch?</h3>
+        <h3>Contact me with any of the following methods!</h3>
         <div className='FlexRow'>
             <div className='FlexCol'>
                 <h1>Phone:<span> 417-123-1234</span></h1>
