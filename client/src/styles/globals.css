@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -54,9 +55,15 @@ a {
 	text-decoration: none;
 	font-size: inherit;
 }
+button {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: 0;
+}
 :root {
 	--color-primary: #6799e9;
-	--color-secondary: #e64ea7;
+	--color-secondary: #b14a86;
 	--color-white: #fafafa;
 	--color-greyli: #f5f5f5;
 	--color-grey: #959595;
@@ -91,6 +98,44 @@ div#__next {
 			font-size: 1.2rem;
 			color: var(--color-black);
 		}
+	.NavContainer.MobileNav {
+		width: 100%;
+		padding: 0;
+	}
+		.NavContainer.MobileNav img {
+			height: 30px;
+			width: 30px;
+			align-self: flex-end;
+			padding-right: 1em;
+			cursor: pointer;
+		}
+		.NavContainer.MobileNav .FlexCol {
+			visibility: hidden;
+			display: flex;
+			align-items: flex-start;
+			gap: 1.5em;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: -100vw;
+			font-size: 2rem;
+			font-weight: 700;
+			color: var(--color-grey);
+			background-color: var(--color-greyli);
+			transition: right 0.5s ease;
+		}
+		.NavContainer.MobileNav .FlexCol.active {
+			visibility: visible;
+			right: 0;
+			transition: right 0.3s ease;
+		}
+			.NavContainer.MobileNav img {
+				padding-top: 1em;
+			}
+			.NavContainer.MobileNav .FlexCol a {
+				padding-left: 1em;
+			}
+
 	/* footer component */
 	.FooterContainer {
 		display: flex;
@@ -124,7 +169,7 @@ div#__next {
 		justify-content: center;
 		align-items: flex-start;
 		gap: 1em;
-		height: 60vh;
+		padding-top: 10em;
 	}
 		.IndexContainer h1 > span {
 			color: var(--color-primary);
@@ -158,6 +203,9 @@ div#__next {
 				flex: 1;
 				flex-grow: 1;
 			}
+			.AboutContainer .ImageContainer {
+				align-self: flex-start;
+			}
 			.AboutContainer .ImageContainer > h2 {
 				font-weight: 700;
 				color: var(--color-primary);
@@ -178,10 +226,11 @@ div#__next {
 				gap: 4em;
 			}
 			.SkillsContainer .FlexRow .FlexCol {
-				width: clamp(5em, 80%, 30em);
+				width: clamp(20em, 40%, 30em);
 				padding: 2em 0 2em 0;
 				border-radius: 10px;
 				background-color: var(--color-greyli);
+				box-shadow: 0 0 1em var(--color-grey);
 			}
 				.SkillsContainer .FlexRow .FlexCol h1 {
 					font-size: 2rem;
@@ -193,13 +242,13 @@ div#__next {
 					gap: 2em;
 					width: 90%;
 					padding: 1em 0 1em 0;
-					box-shadow: 0em 0.1em 1em var(--color-grey);
+					transition: padding 0.5s ease;
 					cursor: pointer;
 				}
 					.SkillsContainer .FlexRow .FlexCol .FlexRow:hover {
-						padding: 1.2em 0 1.2em 0;
-						transition: all 0.5s ease;
-						background-color: var(--color-primary);
+						padding-top: 2em;
+						padding-bottom: 2em;
+						transition: all 0.3s ease;
 					}
 					.SkillsContainer .FlexRow .FlexCol .FlexRow img {
 						margin-left: 1em;
@@ -212,10 +261,132 @@ div#__next {
 			padding-bottom: 1em;
 		}
 			.ProjectContainer .FlexCol {
+				margin-top: 1em;
+				text-align: left;
 				padding: 2em 0 2em 0;
-				border-top: 1px solid var(--color-grey);
+				border-radius: 10px;
+				box-shadow: 0 0 1em var(--color-grey);
 				background-color: var(--color-greyli);
+				transition: padding 0.5s ease;
 			}
+			.ProjectContainer .FlexCol:hover {
+				padding-top: 4em;
+				padding-bottom: 4em;
+				transition: all 0.3s ease;
+				cursor: pointer;
+			}
+				.ProjectContainer .FlexCol img.ProjectCover {
+					height: 300px;
+					width: 70%;
+					border: 4px solid var(--color-grey);
+					border-radius: 10px;
+					object-fit: cover;
+				}
+				.ProjectContainer .FlexCol h1 {
+					font-size: 2.5rem;
+				}
+				.ProjectContainer .FlexCol h2 {
+					padding: 1em;
+					font-size: 1.5rem;
+				}
+				.ProjectContainer .FlexCol h3 {
+					padding: 1em 10% 1em 10%;
+					color: var(--color-black);
+				}
+				.ProjectContainer .FlexCol a {
+					font-weight: 700;
+					text-decoration: underline;
+					color: var(--color-secondary);
+				}
+			.ProjectContainer .FlexRow {
+				gap: 2em;
+				padding: 1em;
+			}
+		.BlogContainer {
+			width: clamp(200px, 94%, 1200px);
+		}
+		.BlogContainer > h1 {
+			margin-bottom: 0.5em;
+		}
+		.BlogContainer .FlexCol {
+			gap: 0;
+			background-color: var(--color-greyli);
+		}
+			.BlogContainer .FlexCol .FlexCol{
+				align-items: flex-start;
+				padding: 2em;
+				transition: padding 0.5s ease;
+			}
+			.BlogContainer .FlexCol .FlexCol:hover{
+				padding-top: 4em;
+				padding-bottom: 4em;
+				transition: all 0.3s ease;
+				cursor: pointer;
+			}
+			.BlogContainer .FlexCol .FlexCol:nth-child(n + 2){
+				border-top: 1px solid var(--color-grey);
+			}
+			.BlogContainer .FlexCol .FlexCol > h1{
+				font-size: 1rem;
+				padding-bottom: 1em;
+				color: var(--color-grey);
+			}
+			.BlogContainer .FlexCol .FlexCol > h2{
+				font-size: 2rem;
+				font-weight: 700;
+				padding-bottom: 1em;
+			}
+				.BlogContainer .FlexCol .FlexCol .FlexRow{
+					justify-content: flex-start;
+					align-items: center;
+					flex-wrap: wrap;
+					background-color: var(--color-greyli);
+				}
+				/* tag colors */
+				.BlogContainer .FlexCol .FlexCol .FlexRow h2 {
+					padding: 0.5em;
+					font-size: 1.1rem;
+					border-radius: 5px;
+				}
+				.BlogContainer .FlexCol .FlexCol .FlexRow h2.TagProject {
+					background-color: #f796cf;
+				}
+				.BlogContainer .FlexCol .FlexCol .FlexRow h2.TagDiscussion {
+					background-color: #7fd6ff;
+				}
+				.BlogContainer .FlexCol .FlexCol .FlexRow h2.TagTip {
+					background-color: #90ff7f;
+				}
+				.BlogContainer .FlexCol .FlexCol .FlexRow h2.TagProgress {
+					background-color: #ffff7f;
+				}
+		.ContactContainer {
+			width: clamp(200px, 94%, 1200px);
+		}
+		.ContactContainer h1 {
+			margin-bottom: 1em;
+		}
+			.ContactContainer .FlexRow {
+				flex-wrap: wrap;
+				width: clamp(200px, 100%, 1200px);
+			}
+				.ContactContainer .FlexRow .FlexCol {
+					flex: 1;
+					padding: 1em;
+					border-radius: 10px;
+					background-color: var(--color-greyli);
+				}
+				.ContactContainer .FlexRow .FlexCol h1 {
+					align-self: flex-start;
+					width: 100%;
+					padding: 0.5em;
+					font-size: 1.5rem;
+					overflow: hidden;
+					overflow-wrap: break-word;
+				}
+				.ContactContainer .FlexRow .FlexCol h1 span {
+					font-size: 1rem;
+				}
 
 /* flex container */
 .FlexRow {
@@ -253,4 +424,16 @@ img.SkillIcon {
 	width: 40px;
 	border: 0;
 	border-radius: 0;
+}
+
+@media only screen and (max-width: 800px) {
+	.DesktopNav {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.MobileNav {
+		display: none;
+	}
 }
