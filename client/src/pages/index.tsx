@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
       <NavBar />
       <main className='MainContainer IndexContainer'>
-        <h1>Hi, I'm <span>Drake Buentello</span></h1>
+        <h1>Hi, I&apos;m <span>Drake Buentello</span></h1>
         <h2>Computer Science Undergraduate</h2>
         <h3>Read more <Link href='about'><span>about me</span></Link> or <Link href='contact'><span>contact me</span></Link></h3>
       </main>
