@@ -3,15 +3,8 @@ import React, { useState } from 'react';
 
 export default function NavBar() {
 
-    const [navClass, setNavClass] = useState('FlexCol')
+    const [navClass, setNavClass] = useState(false)
 
-    const toggleNav = () => {
-        if(navClass === 'FlexCol') {
-            setNavClass('FlexCol active');
-            return
-        }
-        setNavClass('FlexCol');
-    }
 
     return (
         <>
@@ -23,8 +16,8 @@ export default function NavBar() {
                     <Link href='contact'>Contact</Link>
             </div>
             <div className='NavContainer MobileNav'>
-                <img onClick={toggleNav} src='icon-bars.svg' />
-                <div onClick={toggleNav} className={navClass}>
+                <img onClick={() => setNavClass(!navClass)} src='icon-bars.svg' />
+                <div onClick={() => setNavClass(!navClass)} className={navClass ? 'FlexCol active' : 'FlexCol'} style={navClass ? {display:'flex'} : {display:'none'}}>
                     <img src='icon-x.svg' />
                     <Link href='/'>Home</Link>
                     <Link href='about'>About Me</Link>

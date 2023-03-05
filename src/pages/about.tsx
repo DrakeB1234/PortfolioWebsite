@@ -63,6 +63,10 @@ export default function About() {
                   <img className='SkillIcon' src='/mysql.png' />
                   <h2>MySQL</h2>
                 </div>
+                <div className="FlexRow">
+                  <img className='SkillIcon' src='/supabase.svg' />
+                  <h2>Supabase</h2>
+                </div>
               </div>
             </div>
           </div>

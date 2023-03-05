@@ -22,6 +22,7 @@ export default function Projects() {
                   <img className='SkillIcon' src='/nodejs.png' />
                   <img className='SkillIcon' src='/react.png' />
                   <img className='SkillIcon' src='/mysql.png' />
+                  <img className='SkillIcon' src='/supabase.svg' />
               </div>
               <h3>&emsp;Socialfunc is a web platform aimed at groups of family and friends to get together 
                 and play some fun and interactable games! Whether you are using one device for the whole family,

@@ -77,7 +77,6 @@ div#__next {
 	align-items: center;
 	min-height: 100vh;
 	width: 100%;
-	overflow-x: hidden;
 	background-color: var(--color-white);
 }
 .MainContainer {
@@ -110,7 +109,6 @@ div#__next {
 			cursor: pointer;
 		}
 		.NavContainer.MobileNav .FlexCol {
-			visibility: hidden;
 			display: flex;
 			align-items: flex-start;
 			gap: 1.5em;
@@ -123,9 +121,9 @@ div#__next {
 			color: var(--color-grey);
 			background-color: var(--color-greyli);
 			transition: right 0.5s ease;
+			overflow: hidden;
 		}
 		.NavContainer.MobileNav .FlexCol.active {
-			visibility: visible;
 			right: 0;
 			transition: right 0.3s ease;
 		}
