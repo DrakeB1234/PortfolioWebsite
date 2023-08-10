@@ -160,6 +160,9 @@ export default function Projects(props: props) {
           <p>Android and WebGL game made using Unity and currently deployed on both Itch.io and the Google Play Store.</p>
           <Link target='_blank' href='https://devriot.itch.io/click-blitz'><Image alt='' src={'/icons/icon-logout-outline.svg'} height={15} width={15}/>www.itch.io/click-blitz.com</Link>
           <hr></hr>
+          <h3>* Recommended to play on a mobile device!</h3>
+          <iframe src="https://itch.io/embed-upload/8478594?color=333333" allowFullScreen={true} width="640" height="380"><a href="https://devriot.itch.io/click-blitz">Play Click Blitz on itch.io</a></iframe>
+
           <h2>Stack</h2>
           <div className={styles.StackContainer}>
             <h1>C#</h1>
@@ -209,8 +212,8 @@ export default function Projects(props: props) {
       ?
         <div className={styles.FullProjectContainer}>
           <h1>Socialfunc</h1>
-          <p>A android game that has the player tap as many balls as they can on the screen before running out of time, make sure to catch the special effects balls to add more time and more!</p>
-          <p>Android and WebGL game made using Unity and currently deployed on both Itch.io and the Google Play Store.</p>
+          <p>A experimental platform made to connect players together using websockets and socket.io to play games together through the convience of a web browser!</p>
+          <p>Heavily utilized websockets and socket.io to create rooms and keep players connected to each other in order to play games.</p>
           <Link target='_blank' href='https://socialfunc.com'><Image alt='' src={'/icons/icon-logout-outline.svg'} height={15} width={15}/>www.socialfunc.com</Link>
           <hr></hr>
           <h2>Stack</h2>
