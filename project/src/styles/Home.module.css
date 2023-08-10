@@ -33,11 +33,11 @@
     font-weight: 700;
   }
 .ContentParent {
-  width: clamp(100px, 100%, 800px);
+  width: clamp(100px, 100%, 850px);
   margin: 0 auto 0 auto;
 }
   .SectionHeader {
-    padding: 1em 0 0.5em 0.5em;
+    padding: 2em 0 0.5em 0.5em;
     color: var(--color-ultraviolet);
     font-weight: 700;
     font-size: var(--fontsize-xlarge);
@@ -59,37 +59,6 @@
     color: var(--color-violet);
     font-size: var(--fontsize-large);
   }
-.SkillsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 4em 1em;
-  padding: 1em;
-  padding-top: 3em;
-}
-  .Skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1em 1em 0 1em;
-    min-height: 120px;
-    min-width: 120px;
-    background-color: var(--color-grey);
-    border-radius: 6px;
-    box-shadow: 0.5em 0.5em 0.5em var(--color-violet);
-  }
-    .Skill > img {
-      position: relative;
-      bottom: 50px;
-      background-color: white;
-    }
-    .Skill > h1 {
-      position: relative;
-      bottom: 35px;
-      font-size: var(--fontsize-large);
-      color: var(--color-ultraviolet);
-      font-weight: 700;
-    }
 
 @media only screen and (max-width:600px) {
   .IntroContainer {
