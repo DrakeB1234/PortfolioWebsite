@@ -15,12 +15,12 @@ export default function Projects(props: props) {
   const router = useRouter();
   const {q} = router.query;
 
-  const [showProjectDetails, useShowProjectDetails] = useState('');
+  const [showProjectDetails, setShowProjectDetails] = useState('');
 
   useEffect(() => {
     if (q)
     {
-      useShowProjectDetails(q.toString())
+      setShowProjectDetails(q.toString())
     }
   }, [q])
   
@@ -44,7 +44,7 @@ export default function Projects(props: props) {
           {props.showMore
           ?
           <button className={buttonStyles.ClearButton}
-          onClick={() => useShowProjectDetails("scratchify")}
+          onClick={() => setShowProjectDetails("scratchify")}
           >Show More</button>
           :
           <a className={buttonStyles.ClearButton} href={'/projects?q=scratchify'}>Show More</a>
@@ -61,11 +61,12 @@ export default function Projects(props: props) {
           />
           <h1>Click Blitz</h1>
           <h2>A android game that has the player tap as many balls as they can on the screen before running out of time!</h2>
+          <a>PLAYABLE GAME</a>
           {/* change between link and react buttons */}
           {props.showMore
           ?
           <button className={buttonStyles.ClearButton}
-          onClick={() => useShowProjectDetails("clickblitz")}
+          onClick={() => setShowProjectDetails("clickblitz")}
           >Show More</button>
           :
           <a className={buttonStyles.ClearButton} href={'/projects?q=clickblitz'}>Show More</a>
@@ -86,7 +87,7 @@ export default function Projects(props: props) {
           {props.showMore
           ?
           <button className={buttonStyles.ClearButton}
-          onClick={() => useShowProjectDetails("socialfunc")}
+          onClick={() => setShowProjectDetails("socialfunc")}
           >Show More</button>
           :
           <a className={buttonStyles.ClearButton} href={'/projects?q=socialfunc'}>Show More</a>
@@ -148,7 +149,7 @@ export default function Projects(props: props) {
           </div>
 
           <button className={buttonStyles.ClearButton}
-          onClick={() => useShowProjectDetails("")}
+          onClick={() => setShowProjectDetails("")}
           >Show Less</button>
         </div>
       :
@@ -204,7 +205,7 @@ export default function Projects(props: props) {
           </div>
 
           <button className={buttonStyles.ClearButton}
-          onClick={() => useShowProjectDetails("")}
+          onClick={() => setShowProjectDetails("")}
           >Show Less</button>
         </div>
       :
@@ -245,13 +246,13 @@ export default function Projects(props: props) {
           </div>
 
           <button className={buttonStyles.ClearButton}
-          onClick={() => useShowProjectDetails("")}
+          onClick={() => setShowProjectDetails("")}
           >Show Less</button>
         </div>
       :
       <div className={styles.FullProjectContainer}>
         <button className={buttonStyles.ClearButton}
-        onClick={() => useShowProjectDetails("")}
+        onClick={() => setShowProjectDetails("")}
         >Show Less</button>
       </div>
       }
