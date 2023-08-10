@@ -3,8 +3,9 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 4em 1em;
-    padding: 1em;
-    padding-top: 3em;
+    padding: 3em 0 1em 0;
+    margin-bottom: 4em;
+    overflow: hidden;
   }
     .Project {
       display: flex;
@@ -29,3 +30,95 @@
         color: var(--color-ultraviolet);
         padding: 0.6em;
       }
+.FullProjectContainer {
+  display: flex;
+  flex-direction: column;
+  width: clamp(100px, 100%, 700px);
+  padding: 1em;
+}
+  .FullProjectContainer > h1 {
+    font-size: var(--fontsize-xlarge);
+    color: var(--color-ultraviolet);
+    padding-bottom: 1em;
+    font-weight: 700;
+  }
+  .FullProjectContainer > h2 {
+    font-size: var(--fontsize-large);
+    color: var(--color-black);
+    margin-top: 1em;
+  }
+  .FullProjectContainer > p {
+    color: var(--color-darkgrey);
+    line-height: 1.8;
+    font-weight: 100;
+  }
+  .FullProjectContainer > a {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 1em;
+    font-weight: 700;
+  }
+  .FullProjectContainer > img {
+    padding: 1em;
+    margin: 1em 0 2em 0;
+    border-radius: 10px;
+  }
+  .FullProjectContainer > hr {
+    width: 100%;
+    margin: 2em 0 1em 0;
+    color: var(--color-grey);
+  }
+  .FullProjectContainer > button {
+    align-self: center;
+  }
+.StackContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  padding: 1em 0 1em 0;
+}
+  .StackContainer > h1 {
+    color: white;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    border-radius: 2px;
+  }
+    .StackContainer > h1:nth-child(n) {
+      background-color: var(--color-blue);
+    }
+    .StackContainer > h1:nth-child(2n) {
+      background-color: rgb(77, 124, 225);
+    }
+    .StackContainer > h1:nth-child(3n) {
+      background-color: rgb(36, 77, 202);
+    }
+    .StackContainer > h1:nth-child(4n) {
+      background-color: rgb(54, 186, 238);
+    }
+.DeploymentsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  padding: 1em 0 1em 0;
+}
+  .DeploymentsContainer > h1 {
+    color: white;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    border-radius: 2px;
+  }
+    .DeploymentsContainer > h1:nth-child(n) {
+      background-color: var(--color-ultraviolet);
+    }
+    .DeploymentsContainer > h1:nth-child(2n) {
+      background-color: rgb(70, 80, 99);
+    }
+.ScreenshotsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2em 1em;
+  padding: 2em 0 2em 0;
+  margin: 1em 0 1em 0;
+  border-radius: 10px;
+  background-color: var(--color-grey);
+}

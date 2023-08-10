@@ -7,9 +7,10 @@ import { Roboto } from 'next/font/google'
 import Socialbar from '@/components/socialbar/socialbar'
 import Skills from '@/components/skills/skills'
 import Projects from '@/components/projects/projects'
+import Navbar from '@/components/navbar/navbar'
 
 const roboto = Roboto({
-  weight: ['400', '700'],
+  weight: ['100', '300', '400', '500', '700'],
   subsets: ['latin'],
 })
 
@@ -22,6 +23,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
       <main className={styles.main + ' ' + roboto.className}>
         <div className={styles.IntroContainer}>
           <div className={styles.MeImageContainer}>
@@ -55,7 +57,7 @@ export default function Home() {
           <Skills />
 
           <h1 className={styles.SectionHeader}>Projects</h1>
-          <Projects />
+          <Projects showMore={false}/>
 
         </div>
       </main>

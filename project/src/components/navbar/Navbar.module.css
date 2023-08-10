@@ -1,0 +1,27 @@
+.NavbarContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    padding: 1em 6% 1em 6%;
+    background-color: var(--color-grey);
+}
+  .NavbarContainer > a {
+    font-size: var(--fontsize-large);
+  }
+.ActiveLink {
+  color: var(--color-green);
+  text-decoration: overline;
+}
+.UnActiveLink {
+  color: var(--color-ultraviolet);
+}
+
+
+  @media only screen and (max-width:600px) {
+    .NavbarContainer > a {
+      font-size: var(--fontsize-med);
+    }
+    .NavbarContainer {
+      padding: 1em;
+  }
+  }

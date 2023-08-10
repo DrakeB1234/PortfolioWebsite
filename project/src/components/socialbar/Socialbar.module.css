@@ -10,10 +10,11 @@
     }
 .IconContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    width: clamp(100px, 100%, 500px);
     align-items: center;
     gap: 1em;
-    padding: 0.5em;
+    padding: 1em;
 }
     .IconContainer > a > img {
         height: auto;

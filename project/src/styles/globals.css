@@ -53,19 +53,21 @@ a {
  color: var(--color-green);
 }
 
-h1,h2,h3,h4 {
+h1,h2,h3,h4,p {
   color: var(--color-ultraviolet);
 }
 
 :root {
   --color-ultraviolet: #28203b;
   --color-violet: #9a92ae;
-  --color-blue: #79a6c2;
+  --color-blue: #88bee0;
   --color-green:#84cf7e;
   --color-grey: #eeeeee;
+  --color-darkgrey: #717078;
+  --color-black: #1a1a1e;
 
   --fontsize-xlarge: 1.8rem;
   --fontsize-large: 1.4rem;
-  --fontsize-med: 1.2rem;
+  --fontsize-med: 1.1rem;
   --fontsize-small: 0.8rem;
 }
