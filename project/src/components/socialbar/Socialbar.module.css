@@ -1,0 +1,21 @@
+.MainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid var(--color-grey);
+}
+    .MainContainer > h1 {
+        font-size: var(--fontsize-small);
+    }
+.IconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 0.5em;
+}
+    .IconContainer > a > img {
+        height: auto;
+        max-width: 100%;
+    }

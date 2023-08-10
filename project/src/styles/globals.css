@@ -50,6 +50,7 @@ table {
 /* CUSTOM */
 a {
  text-decoration: none;
+ color: var(--color-green);
 }
 
 h1,h2,h3,h4 {
@@ -60,7 +61,7 @@ h1,h2,h3,h4 {
   --color-ultraviolet: #28203b;
   --color-violet: #9a92ae;
   --color-blue: #79a6c2;
-  --color-green:rgb(132, 207, 126)2;
+  --color-green:#84cf7e;
   --color-grey: #eeeeee;
 
   --fontsize-xlarge: 1.8rem;

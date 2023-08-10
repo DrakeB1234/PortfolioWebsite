@@ -1,6 +1,8 @@
 .main {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 4em;
 }
 .IntroContainer {
   display: flex;
@@ -9,6 +11,7 @@
   align-items: center;
   gap: 2em 3em;
   padding: 1em 0 1em 0;
+  margin-bottom: 5em;
   border-bottom: 5px solid var(--color-violet);
   background-color: var(--color-grey);
 }
@@ -18,7 +21,7 @@
 }
 .MeDescriptionContainer {
   position: relative;
-  top: 100px;
+  top: 80px;
 }
   .MeDescriptionContainer > h1, .MeDescriptionContainer > h2 {
     color: var(--color-violet);
@@ -29,17 +32,83 @@
     font-size: var(--fontsize-xlarge);
     font-weight: 700;
   }
-
-  @media only screen and (max-width:600px) {
-    .MeDescriptionContainer {
-      top: 0;
-    }
-    .MeImageContainer {
-      display: flex;
-      justify-content: center;
-      top: 0;
-    }
-    .MeImageContainer > img {
-      width: 60%;
-    }
+.ContentParent {
+  width: clamp(100px, 100%, 800px);
+  margin: 0 auto 0 auto;
+}
+  .SectionHeader {
+    padding: 1em 0 0.5em 0.5em;
+    color: var(--color-ultraviolet);
+    font-weight: 700;
+    font-size: var(--fontsize-xlarge);
   }
+.AboutContainer {
+  padding: 0.5em;
+  padding-top: 0;
+}
+.TextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 50%;
+  margin-top: 1em;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+  .TextContainer > h2 {
+    color: var(--color-violet);
+    font-size: var(--fontsize-large);
+  }
+.SkillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 4em 1em;
+  padding: 1em;
+  padding-top: 3em;
+}
+  .Skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 1em 0 1em;
+    min-height: 120px;
+    min-width: 120px;
+    background-color: var(--color-grey);
+    border-radius: 6px;
+    box-shadow: 0.5em 0.5em 0.5em var(--color-violet);
+  }
+    .Skill > img {
+      position: relative;
+      bottom: 50px;
+      background-color: white;
+    }
+    .Skill > h1 {
+      position: relative;
+      bottom: 35px;
+      font-size: var(--fontsize-large);
+      color: var(--color-ultraviolet);
+      font-weight: 700;
+    }
+
+@media only screen and (max-width:600px) {
+  .IntroContainer {
+    margin-bottom: 0;
+  }
+  .MeDescriptionContainer {
+    top: 0;
+  }
+  .MeImageContainer {
+    display: flex;
+    justify-content: center;
+    top: 0;
+  }
+  .MeImageContainer > img {
+    width: 60%;
+  }
+  .TextContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
