@@ -35,7 +35,7 @@ export default function Home() {
           </div>
           <div className={styles.MeDescriptionContainer}>
             <h1>Hello</h1>
-            <h2>I'm <span>Drake Buentello</span></h2>
+            <h2>I&apos;m <span>Drake Buentello</span></h2>
           </div>
         </div>
 
@@ -46,7 +46,7 @@ export default function Home() {
           <h1 className={styles.SectionHeader}>About Me</h1>
           <div className={styles.AboutContainer}>
             <div className={styles.TextContainer}>
-              <h2>I'm a enthusiast of new techonolgies and a strong adapter of them. I believe to be successful in programming is to look deeper beyond abstraction, to understand what really makes it work.</h2>
+              <h2>I&apos;m a enthusiast of new techonolgies and a strong adapter of them. I believe to be successful in programming is to look deeper beyond abstraction, to understand what really makes it work.</h2>
               <h2>I am currently a student enrolled at Wilmington Univeristy, working towards a BA of Computer Science. I have significant knowledge of both backend and frontend technologies and industry standard frameworks.</h2>
             </div>
           </div>
