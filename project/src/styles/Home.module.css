@@ -1,0 +1,45 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.IntroContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em 3em;
+  padding: 1em 0 1em 0;
+  border-bottom: 5px solid var(--color-violet);
+  background-color: var(--color-grey);
+}
+.MeImageContainer {
+  position: relative;
+  top: 100px;
+}
+.MeDescriptionContainer {
+  position: relative;
+  top: 100px;
+}
+  .MeDescriptionContainer > h1, .MeDescriptionContainer > h2 {
+    color: var(--color-violet);
+    font-size: var(--fontsize-large);
+  }
+  .MeDescriptionContainer > h2 > span {
+    color: var(--color-blue);
+    font-size: var(--fontsize-xlarge);
+    font-weight: 700;
+  }
+
+  @media only screen and (max-width:600px) {
+    .MeDescriptionContainer {
+      top: 0;
+    }
+    .MeImageContainer {
+      display: flex;
+      justify-content: center;
+      top: 0;
+    }
+    .MeImageContainer > img {
+      width: 60%;
+    }
+  }

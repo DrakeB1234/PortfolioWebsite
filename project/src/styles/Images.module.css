@@ -1,0 +1,7 @@
+.MeImage {
+    height: auto;
+    max-width: 100%;
+    border-radius: 50%;
+    filter: contrast(60%);
+    border: 8px solid var(--color-violet);
+}
