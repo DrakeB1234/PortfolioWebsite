@@ -50,7 +50,7 @@ table {
 /* CUSTOM */
 a {
  text-decoration: none;
- color: var(--color-green);
+ color: var(--color-theme2);
 }
 
 h1,h2,h3,h4,p {
@@ -60,11 +60,12 @@ h1,h2,h3,h4,p {
 :root {
   --color-ultraviolet: #28203b;
   --color-violet: #9a92ae;
-  --color-blue: #88bee0;
-  --color-green:#84cf7e;
   --color-grey: #eeeeee;
   --color-darkgrey: #717078;
   --color-black: #1a1a1e;
+
+  --color-theme1: #562be1;
+  --color-theme2: #2734e1;
 
   --fontsize-xlarge: 1.8rem;
   --fontsize-large: 1.4rem;

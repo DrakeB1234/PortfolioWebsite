@@ -2,8 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 4em 1em;
-    padding: 3em 0 1em 0;
+    gap: 2em 4em;
+    padding: 3em 1em 1em 1em;
     margin-bottom: 4em;
     overflow: hidden;
   }
@@ -29,6 +29,9 @@
         font-size: var(--fontsize-med);
         color: var(--color-ultraviolet);
         padding: 0.6em;
+      }
+      .Project > a {
+        margin-top: auto;
       }
 .FullProjectContainer {
   display: flex;
@@ -93,7 +96,7 @@
     border-radius: 2px;
   }
     .StackContainer > h1:nth-child(n) {
-      background-color: var(--color-blue);
+      background-color: #88bee0;
     }
     .StackContainer > h1:nth-child(2n) {
       background-color: rgb(77, 124, 225);
@@ -130,4 +133,20 @@
   margin: 1em 0 1em 0;
   border-radius: 10px;
   background-color: var(--color-grey);
+}
+
+@media only screen and (max-width:600px) {
+  .ProjectsContainer {
+    padding: 3em 0.5em 1em 0.5em;
+    gap: 2em 1em;
+  }
+  .Project {
+    max-width: 170px;
+  }
+    .Project > h1 {
+      font-size: var(--fontsize-med);
+    }
+    .Project > h2 {
+      font-size: var(--fontsize-small);
+    }
 }

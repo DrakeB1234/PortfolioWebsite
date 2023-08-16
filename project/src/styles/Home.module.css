@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding-bottom: 4em;
 }
 .IntroContainer {
   display: flex;
@@ -10,7 +9,6 @@
   justify-content: center;
   align-items: center;
   gap: 2em 3em;
-  padding: 1em 0 1em 0;
   margin-bottom: 5em;
   border-bottom: 5px solid var(--color-violet);
   background-color: var(--color-grey);
@@ -28,41 +26,79 @@
     font-size: var(--fontsize-large);
   }
   .MeDescriptionContainer > h2 > span {
-    color: var(--color-blue);
+    color: var(--color-theme2);
     font-size: var(--fontsize-xlarge);
     font-weight: 700;
   }
 .ContentParent {
-  width: clamp(100px, 100%, 850px);
-  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
   .SectionHeader {
-    padding: 2em 0 0.5em 0.5em;
-    color: var(--color-ultraviolet);
-    font-weight: 700;
+    font-weight: 900;
     font-size: var(--fontsize-xlarge);
+    width: 90%;
+    text-align: center;
+
+    border-width: 0 0 2px 0;
+    line-height: 2;
+    border-style: solid;
   }
+    .WhiteHead {
+      color: white;
+      border-image: radial-gradient(white, rgba(0,0,0,0)) 1;
+    }
+    .DarkHead {
+      color: var(--color-ultraviolet);
+      border-image: radial-gradient(var(--color-ultraviolet), rgba(0,0,0,0)) 1;
+    }
 .AboutContainer {
-  padding: 0.5em;
-  padding-top: 0;
-}
-.TextContainer {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  width: 50%;
-  margin-top: 1em;
-  padding: 0.5em;
+  max-width: 600px;
+  padding: 2em 1em 0 1em;
+  margin: 0.5em 0 2em 0;
   box-sizing: border-box;
+  text-align: center;
 }
-  .TextContainer > h2 {
+  .AboutContainer > h2 {
     color: var(--color-violet);
     font-size: var(--fontsize-large);
   }
+  .AboutContainer > a {
+    margin-top: 2em;
+    text-align: center;
+  }
+.SkillContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2em 0 5em 0;
+  margin-top: 1em;
+  box-sizing: border-box;
+  background-color: var(--color-theme1);
+}
+  .SkillChild {
+    margin-top: 4em;
+    max-width: 650px;
+  }
+.ProjectContainer {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+padding: 2em 0 5em 0;
+margin-top: 1em;
+box-sizing: border-box;
+}
 
 @media only screen and (max-width:600px) {
   .IntroContainer {
     margin-bottom: 0;
+    padding: 1em 0 1em 0;
   }
   .MeDescriptionContainer {
     top: 0;
@@ -80,5 +116,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
+  .AboutContainer > h2 {
+    font-size: var(--fontsize-med);
   }
 }

@@ -40,7 +40,7 @@ export default function SocialBar() {
           />
         </Link>
       </div>
-      <h1>Icons by <a target="_blank" href="https://icons8.com">Icons8</a></h1>
+      <Link target="_blank" href="https://icons8.com">Icons by <span>Icons8</span></Link>
     </div>
   )
 }

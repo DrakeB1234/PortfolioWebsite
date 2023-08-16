@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '@/styles/Home.module.css'
 import imageStyles from '@/styles/Images.module.css'
 import { Roboto } from 'next/font/google'
@@ -10,7 +11,7 @@ import Projects from '@/components/projects/projects'
 import Navbar from '@/components/navbar/navbar'
 
 const roboto = Roboto({
-  weight: ['100', '300', '400', '500', '700'],
+  weight: ['400', '500', '700', '900'],
   subsets: ['latin'],
 })
 
@@ -36,28 +37,32 @@ export default function Home() {
             />
           </div>
           <div className={styles.MeDescriptionContainer}>
-            <h1>Hello</h1>
-            <h2>I&apos;m <span>Drake Buentello</span></h2>
+            <h1>Hello Im </h1>
+            <h2><span>Drake Buentello</span></h2>
           </div>
         </div>
 
-        <Socialbar />
 
         <div className={styles.ContentParent}>
-
-          <h1 className={styles.SectionHeader}>About Me</h1>
+          
           <div className={styles.AboutContainer}>
-            <div className={styles.TextContainer}>
-              <h2>I&apos;m a enthusiast of new techonolgies and a strong adapter of them. I believe to be successful in programming is to look deeper beyond abstraction, to understand what really makes it work.</h2>
-              <h2>I am currently a student enrolled at Wilmington Univeristy, working towards a BA of Computer Science. I have significant knowledge of both backend and frontend technologies and industry standard frameworks.</h2>
+            <h2>I&apos;m a enthusiast of new techonolgies and a strong adapter of them. I believe to be successful in programming is to look deeper beyond abstraction, to understand what really makes it work. I am currently a student enrolled at Wilmington Univeristy, working towards a BA of Computer Science. I have significant knowledge of both backend and frontend technologies and industry standard frameworks.</h2>
+            <Link href="/About">Read More</Link>
+          </div>
+
+          <Socialbar />
+
+          <div className={styles.SkillContainer}>
+            <h1 className={styles.SectionHeader + " " + styles.WhiteHead}>Skills</h1>
+            <div className={styles.SkillChild}>
+              <Skills />
             </div>
           </div>
 
-          <h1 className={styles.SectionHeader}>Skills</h1>
-          <Skills />
-
-          <h1 className={styles.SectionHeader}>Projects</h1>
-          <Projects showMore={false}/>
+          <div className={styles.ProjectContainer}>
+            <h1 className={styles.SectionHeader + " " + styles.DarkHead}>Projects</h1>
+            <Projects showMore={false}/>
+          </div>
 
         </div>
       </main>

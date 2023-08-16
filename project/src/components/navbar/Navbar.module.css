@@ -9,12 +9,19 @@
     font-size: var(--fontsize-large);
   }
 .ActiveLink {
-  color: var(--color-green);
-  text-decoration: overline;
+  color: var(--color-theme1);
+  text-underline-offset: 10px;
+  text-decoration: solid underline 2px;
 }
 .UnActiveLink {
   color: var(--color-ultraviolet);
 }
+  .UnActiveLink:hover {
+    color: var(--color-theme1);
+    text-underline-offset: 8px;
+    text-decoration: solid underline 2px;
+    transition: all 0.5s;
+  }
 
 
   @media only screen and (max-width:600px) {

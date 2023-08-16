@@ -2,12 +2,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     padding-bottom: 0.5em;
-    border-bottom: 2px solid var(--color-grey);
 }
-    .MainContainer > h1 {
+    .MainContainer > a {
+        color: var(--color-ultraviolet);
         font-size: var(--fontsize-small);
+        text-underline-offset: 2px;
+        text-decoration: solid underline var(--color-theme2) 1px;
     }
+        .MainContainer > a > span {
+            color: var(--color-theme2);
+        }
 .IconContainer {
     display: flex;
     justify-content: space-around;
