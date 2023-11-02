@@ -34,8 +34,8 @@ export default function Projects(props: props) {
           className={imageStyles.ProjectImage}
           alt=''
           src={'/projects/Scratchify.png'}
-          height={250}
-          width={250}
+          height={1000}
+          width={1000}
           quality={100}
           />
           <h1>Scratchify</h1>
@@ -54,9 +54,30 @@ export default function Projects(props: props) {
           <Image 
           className={imageStyles.ProjectImage}
           alt=''
+          src={'/projects/tastyscrapes.png'}
+          height={1000}
+          width={1000}
+          quality={100}
+          />
+          <h1>Tastyscrapes</h1>
+          <h2>A recipe scraping app that removes lots of fluff found commonly on recipe websites!</h2>
+          {/* change between link and react buttons */}
+          {props.showMore
+          ?
+          <button className={buttonStyles.ClearButton}
+          onClick={() => setShowProjectDetails("tastyscrapes")}
+          >Show More</button>
+          :
+          <a className={buttonStyles.ClearButton} href={'/projects?q=tastyscrapes'}>Show More</a>
+          }
+        </div>
+        <div className={styles.Project}>
+          <Image 
+          className={imageStyles.ProjectImage}
+          alt=''
           src={'/projects/Clickblitz.png'}
-          height={250}
-          width={250}
+          height={1000}
+          width={1000}
           quality={100}
           />
           <h1>Click Blitz</h1>
@@ -77,8 +98,8 @@ export default function Projects(props: props) {
           className={imageStyles.ProjectImage}
           alt=''
           src={'/projects/Socialfunc.png'}
-          height={250}
-          width={250}
+          height={1000}
+          width={1000}
           quality={100}
           />
           <h1>SocialFunc</h1>
@@ -104,6 +125,7 @@ export default function Projects(props: props) {
           </p>
           <p>Fullstack application using NextJS to handle frontend and APIs, Supabase for Postgres database, User authentication, and image buckets.</p>
           <Link target='_blank' href='https://www.scratchifyhub.com'><Image alt='' src={'/icons/icon-logout-outline.svg'} height={15} width={15}/>www.scrathifyhub.com</Link>
+          <Link target='_blank' href='https://github.com/DrakeB1234/Scratchify'><Image alt='' src={'/icons/icon-logout-outline.svg'} height={15} width={15}/>Github Repo</Link>
           <hr></hr>
           <h2>Stack</h2>
           <div className={styles.StackContainer}>
@@ -126,24 +148,70 @@ export default function Projects(props: props) {
             className={imageStyles.ProjectImage}
             alt=''
             src={'/projects/Scratchify.png'}
-            height={250}
-            width={250}
+            height={1000}
+            width={1000}
             quality={100}
             />
             <Image 
             className={imageStyles.ProjectImage}
             alt=''
             src={'/projects/ScratchifyList.png'}
-            height={250}
-            width={250}
+            height={1000}
+            width={1000}
             quality={100}
             />
             <Image 
             className={imageStyles.ProjectImage}
             alt=''
             src={'/projects/ScratchifyPlanner.png'}
-            height={250}
-            width={250}
+            height={1000}
+            width={1000}
+            quality={100}
+            />
+          </div>
+
+          <button className={buttonStyles.ClearButton}
+          onClick={() => setShowProjectDetails("")}
+          >Show Less</button>
+        </div>
+      :
+      showProjectDetails == "tastyscrapes"
+      ?
+        <div className={styles.FullProjectContainer}>
+          <h1>Tastyscrapes</h1>
+          <p>A recipe scraping app that removes lots of fluff found commonly on recipe websites!</p>
+          <p>Scrapes html from provided URL, formats the important data, then allows user to save, edit, and print recipes!</p>
+          <Link target='_blank' href='https://tastyscrapes.com'><Image alt='' src={'/icons/icon-logout-outline.svg'} height={15} width={15}/>www.tastyscrapes.com</Link>
+          <Link target='_blank' href='https://github.com/DrakeB1234/RecipeScraperApp'><Image alt='' src={'/icons/icon-logout-outline.svg'} height={15} width={15}/>Github Repo</Link>
+          <hr></hr>
+          <h2>Stack</h2>
+          <div className={styles.StackContainer}>
+            <h1>NextJS</h1>
+            <h1>React</h1>
+          </div>
+
+          <h2>Deployments</h2>
+          <div className={styles.DeploymentsContainer}>
+            <h1>Web</h1>
+            <h1>Vercel</h1>
+          </div>
+
+          <h2>Screenshots</h2>
+          <div className={styles.ScreenshotsContainer}>
+            <Image 
+            className={imageStyles.ProjectImage}
+            alt=''
+            src={'/projects/tastyscrapes.png'}
+            height={1000}
+            width={1000}
+            quality={100}
+            />
+            <Image 
+            className={imageStyles.ProjectImage}
+            alt=''
+            src={'/projects/tastyscrapesrobo.png'}
+            height={1000}
+            width={1000}
             quality={100}
             />
           </div>
@@ -182,24 +250,24 @@ export default function Projects(props: props) {
             className={imageStyles.ProjectImage}
             alt=''
             src={'/projects/Clickblitz.png'}
-            height={250}
-            width={250}
+            height={1000}
+            width={1000}
             quality={100}
             />
             <Image 
             className={imageStyles.ProjectImage}
             alt=''
             src={'/projects/ClickblitzPlay.png'}
-            height={250}
-            width={250}
+            height={1000}
+            width={1000}
             quality={100}
             />
             <Image 
             className={imageStyles.ProjectImage}
             alt=''
             src={'/projects/ClickblitzHowto.png'}
-            height={250}
-            width={250}
+            height={1000}
+            width={1000}
             quality={100}
             />
           </div>
@@ -216,6 +284,7 @@ export default function Projects(props: props) {
           <p>A experimental platform made to connect players together using websockets and socket.io to play games together through the convience of a web browser!</p>
           <p>Heavily utilized websockets and socket.io to create rooms and keep players connected to each other in order to play games.</p>
           <Link target='_blank' href='https://socialfunc.com'><Image alt='' src={'/icons/icon-logout-outline.svg'} height={15} width={15}/>www.socialfunc.com</Link>
+          <Link target='_blank' href='https://github.com/DrakeB1234/ProjectSocialFunc'><Image alt='' src={'/icons/icon-logout-outline.svg'} height={15} width={15}/>Github Repo</Link>
           <hr></hr>
           <h2>Stack</h2>
           <div className={styles.StackContainer}>
@@ -239,8 +308,8 @@ export default function Projects(props: props) {
             className={imageStyles.ProjectImage}
             alt=''
             src={'/projects/Socialfunc.png'}
-            height={250}
-            width={250}
+            height={1000}
+            width={1000}
             quality={100}
             />
           </div>

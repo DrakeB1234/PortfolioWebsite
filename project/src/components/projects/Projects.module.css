@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 2em 4em;
+    width: clamp(100px, 100%, 1400px);
     padding: 3em 1em 1em 1em;
     margin-bottom: 4em;
     overflow: hidden;
@@ -14,11 +15,11 @@
       gap: 1em;
       min-height: 120px;
       min-width: 100px;
-      max-width: 250px;
+      max-width: 350px;
       padding-bottom: 1em;
       background-color: var(--color-grey);
       border-radius: 6px;
-      box-shadow: 0.5em 0.5em 0.5em var(--color-violet);
+      box-shadow: 0 0.1em 0.8em var(--color-violet);
     }
       .Project > h1 {
         font-size: var(--fontsize-large);
@@ -30,7 +31,7 @@
         color: var(--color-ultraviolet);
         padding: 0.6em;
       }
-      .Project > a {
+      .Project > a , .Project > button {
         margin-top: auto;
       }
 .FullProjectContainer {
@@ -129,7 +130,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 2em 1em;
-  padding: 2em 0 2em 0;
+  padding: 15%;
   margin: 1em 0 1em 0;
   border-radius: 10px;
   background-color: var(--color-grey);

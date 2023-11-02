@@ -8,6 +8,7 @@ import { Roboto } from 'next/font/google'
 import Socialbar from '@/components/socialbar/socialbar'
 import Skills from '@/components/skills/skills'
 import Projects from '@/components/projects/projects'
+import GameCarousel from '@/components/gamecarousel/gamecarousel'
 import Navbar from '@/components/navbar/navbar'
 
 const roboto = Roboto({
@@ -47,7 +48,7 @@ export default function Home() {
           
           <div className={styles.AboutContainer}>
             <h2>I&apos;m a enthusiast of new techonolgies and a strong adapter of them. I believe to be successful in programming is to look deeper beyond abstraction, to understand what really makes it work. I am currently a student enrolled at Wilmington Univeristy, working towards a BA of Computer Science. I have significant knowledge of both backend and frontend technologies and industry standard frameworks.</h2>
-            <Link href="/About">Read More</Link>
+            {/* <Link href="/About">Read More</Link> */}
           </div>
 
           <Socialbar />
