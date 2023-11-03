@@ -24,10 +24,12 @@ export default function Projects() {
       </Head>
       <Navbar />
       <main className={styles.main + ' ' + roboto.className}>
-        <ProjectsB showMore={true}/>
         <Socialbar />
 
       </main>
+      <div className={roboto.className}>
+        <ProjectsB showMore={true}/>
+      </div>
     </>
   )
 }

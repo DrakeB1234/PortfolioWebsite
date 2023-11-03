@@ -8,7 +8,6 @@ import { Roboto } from 'next/font/google'
 import Socialbar from '@/components/socialbar/socialbar'
 import Skills from '@/components/skills/skills'
 import Projects from '@/components/projects/projects'
-import GameCarousel from '@/components/gamecarousel/gamecarousel'
 import Navbar from '@/components/navbar/navbar'
 
 const roboto = Roboto({
@@ -60,13 +59,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.ProjectContainer}>
-            <h1 className={styles.SectionHeader + " " + styles.DarkHead}>Projects</h1>
-            <Projects showMore={false}/>
-          </div>
-
         </div>
       </main>
+      <div className={styles.ProjectContainer + ' ' + roboto.className}>
+        <h1 className={styles.SectionHeader + " " + styles.DarkHead}>Projects</h1>
+        <Projects showMore={false}/>
+      </div>
     </>
   )
 }

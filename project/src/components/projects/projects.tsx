@@ -54,7 +54,7 @@ export default function Projects(props: props) {
           <Image 
           className={imageStyles.ProjectImage}
           alt=''
-          src={'/projects/tastyscrapes.png'}
+          src={'/projects/tastyscrapeshome.png'}
           height={1000}
           width={1000}
           quality={100}
@@ -181,7 +181,8 @@ export default function Projects(props: props) {
           <h1>Tastyscrapes</h1>
           <p>A recipe scraping app that removes lots of fluff found commonly on recipe websites!</p>
           <p>Scrapes html from provided URL, formats the important data, then allows user to save, edit, and print recipes!</p>
-          <Link target='_blank' href='https://tastyscrapes.com'><Image alt='' src={'/icons/icon-logout-outline.svg'} height={15} width={15}/>www.tastyscrapes.com</Link>
+          <p>Everything is with local storage, so databases of recipes can be exported from a device and imported to others with a simple file!</p>
+          <Link target='_blank' href='https://tastyscrapeshome.com'><Image alt='' src={'/icons/icon-logout-outline.svg'} height={15} width={15}/>www.tastyscrapes.com</Link>
           <Link target='_blank' href='https://github.com/DrakeB1234/RecipeScraperApp'><Image alt='' src={'/icons/icon-logout-outline.svg'} height={15} width={15}/>Github Repo</Link>
           <hr></hr>
           <h2>Stack</h2>
@@ -201,7 +202,23 @@ export default function Projects(props: props) {
             <Image 
             className={imageStyles.ProjectImage}
             alt=''
+            src={'/projects/tastyscrapeshome.png'}
+            height={1000}
+            width={1000}
+            quality={100}
+            />
+            <Image 
+            className={imageStyles.ProjectImage}
+            alt=''
             src={'/projects/tastyscrapes.png'}
+            height={1000}
+            width={1000}
+            quality={100}
+            />
+            <Image 
+            className={imageStyles.ProjectImage}
+            alt=''
+            src={'/projects/tastyscrapessettings.png'}
             height={1000}
             width={1000}
             quality={100}
