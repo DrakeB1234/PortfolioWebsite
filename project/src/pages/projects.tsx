@@ -23,10 +23,6 @@ export default function Projects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className={styles.main + ' ' + roboto.className}>
-        <Socialbar />
-
-      </main>
       <div className={roboto.className}>
         <ProjectsB showMore={true}/>
       </div>

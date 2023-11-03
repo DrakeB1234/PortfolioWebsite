@@ -25,10 +25,10 @@ export default function Projects(props: props) {
   }, [q])
   
   return (
+    <>
+    {showProjectDetails == ''
+    ?
     <div className={styles.ProjectsContainer}>
-      {showProjectDetails == ''
-      ?
-      <>
         <div className={styles.Project}>
           <Image 
           className={imageStyles.ProjectImage}
@@ -114,7 +114,7 @@ export default function Projects(props: props) {
           <a className={buttonStyles.ClearButton} href={'/projects?q=socialfunc'}>Show More</a>
           }  
         </div>
-      </>
+      </div>
       :
       showProjectDetails == "scratchify"
       ?
@@ -342,6 +342,6 @@ export default function Projects(props: props) {
         >Show Less</button>
       </div>
       }
-    </div>
+    </>
   )
 }

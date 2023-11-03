@@ -35,8 +35,13 @@
 .FullProjectContainer {
   display: flex;
   flex-direction: column;
+  margin: auto;
+  margin-top: 2em;
   width: clamp(100px, 100%, 700px);
   padding: 1em;
+  padding-bottom: 4em;
+  box-sizing: border-box;
+  overflow: hidden;
 }
   .FullProjectContainer > h1 {
     font-size: var(--fontsize-xlarge);
@@ -133,6 +138,9 @@
   border-radius: 10px;
   background-color: var(--color-grey);
 }
+  .ScreenshotsContainer > img {
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.4);
+  }
 
 @media only screen and (max-width:600px) {
   .ProjectsContainer {
